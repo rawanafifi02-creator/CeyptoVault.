@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoVault - Wallet</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <input type="checkbox" id="theme-switch" class="theme-checkbox">
+
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <span class="logo-icon">CV</span>
+                    <h2>CryptoVault</h2>
+                </div>
+
+                <div class="menu-section">
+                    <p class="menu-title">MAIN MENU</p>
+                    <nav class="nav-links">
+                        <a href="index.html">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Dashboard
+                        </a>
+                        <a href="markets.html">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            Markets
+                        </a>
+                        <a href="wallet.html" class="active">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                            Wallet
+                        </a>
+                    </nav>
+                </div>
+
+                <div class="menu-section">
+                    <p class="menu-title">ACCOUNT</p>
+                    <nav class="nav-links">
+                        <a href="settings.html">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                            Settings
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <label for="theme-switch" class="theme-toggle-btn">
+                    <span style="display:flex; align-items:center; gap:8px;">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                        Light Mode
+                    </span>
+                    <div class="toggle-track"><div class="toggle-thumb"></div></div>
+                </label>
+                <a href="login.html" class="logout-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                    Logout
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="topbar">
+                <div class="page-header">
+                    <h1>Wallet</h1>
+                    <p>Manage your crypto assets and transactions</p>
+                </div>
+            </header>
+
+            <section class="wallet-top-grid">
+                <div class="card highlight-card">
+                    <div class="w-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                    </div>
+                    <span class="w-title">Total Balance</span>
+                    <h2 class="w-val">$84,254.32</h2>
+                    <span class="w-sub">+$2,847.50 (3.5%) this month</span>
+                </div>
+                <div class="card">
+                    <div class="w-icon dark">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    </div>
+                    <span class="stat-title">Staked Assets</span>
+                    <h2 class="stat-value" style="margin: 8px 0;">$12,450.00</h2>
+                    <span class="stat-change positive">Earning 8.2% APY</span>
+                </div>
+                <div class="card">
+                    <div class="w-icon dark">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    </div>
+                    <span class="stat-title">Total Rewards</span>
+                    <h2 class="stat-value" style="margin: 8px 0;">$1,024.80</h2>
+                    <span class="stat-change positive">+$45.20 this week</span>
+                </div>
+            </section>
+
+            <section class="wallet-actions">
+                <button class="btn-primary">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                    Deposit
+                </button>
+                <button class="btn-secondary">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+                    Withdraw
+                </button>
+                <button class="btn-secondary">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                    Swap
+                </button>
+                <button class="btn-secondary">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Stake
+                </button>
+            </section>
+            <section class="wallet-middle-grid">
+                <div class="card">
+                    <h3 style="margin-bottom: 16px; font-size: 16px;">Your Wallets</h3>
+                    <div class="wallets-list">
+                        <div class="wallet-row">
+                            <div class="w-left">
+                                <span class="coin-badge btc">B</span>
+                                <div>
+                                    <strong>Bitcoin</strong>
+                                    <small class="addr">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</small>
+                                </div>
+                            </div>
+                            <div class="w-right-group">
+                                <div class="w-right">
+                                    <strong>0.8542 BTC</strong>
+                                    <small>$36,942.50</small>
+                                </div>
+                                <button class="copy-icon-btn" title="Copy">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="wallet-row">
+                            <div class="w-left">
+                                <span class="coin-badge eth">Ξ</span>
+                                <div>
+                                    <strong>Ethereum</strong>
+                                    <small class="addr">0x742d35Cc6634C0532925a3b844Bc9e7595f...</small>
+                                </div>
+                            </div>
+                            <div class="w-right-group">
+                                <div class="w-right">
+                                    <strong>12.45 ETH</strong>
+                                    <small>$28,442.25</small>
+                                </div>
+                                <button class="copy-icon-btn" title="Copy">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="wallet-row">
+                            <div class="w-left">
+                                <span class="coin-badge usdt">₮</span>
+                                <div>
+                                    <strong>Tether USDT</strong>
+                                    <small class="addr">0x742d35Cc6634C0532925a3b844Bc9e7595f...</small>
+                                </div>
+                            </div>
+                            <div class="w-right-group">
+                                <div class="w-right">
+                                    <strong>15,000 USDT</strong>
+                                    <small>$15,000.00</small>
+                                </div>
+                                <button class="copy-icon-btn" title="Copy">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="wallet-row">
+                            <div class="w-left">
+                                <span class="coin-badge sol">S</span>
+                                <div>
+                                    <strong>Solana</strong>
+                                    <small class="addr">7EcDhSYGxXyscszYEp35KHN8vvw3svAuLK...</small>
+                                </div>
+                            </div>
+                            <div class="w-right-group">
+                                <div class="w-right">
+                                    <strong>39.45 SOL</strong>
+                                    <small>$3,869.57</small>
+                                </div>
+                                <button class="copy-icon-btn" title="Copy">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card qr-card">
+                    <h3 style="margin-bottom: 20px; font-size: 16px; text-align: left;">Receive Bitcoin</h3>
+                    <div class="qr-box">
+                        <svg width="130" height="130" viewBox="0 0 24 24" fill="#121212">
+                            <path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v2h-3v-2zm-3 0h2v3h-2v-3zm3 3h3v3h-3v-3zm-3 2h2v3h-2v-3zm3 3h3v2h-3v-2z"/>
+                        </svg>
+                    </div>
+                    <p class="qr-addr">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</p>
+                    <div class="qr-btns">
+                        <button class="btn-secondary">Copy</button>
+                        <button class="btn-primary">Share</button>
+                    </div>
+                </div>
+            </section>
+            <section class="staking-section">
+                <h3 style="margin-bottom: 16px; font-size: 16px;">Staking Opportunities</h3>
+                <div class="staking-grid">
+                    <div class="card stake-card">
+                        <div class="stake-top">
+                            <span class="coin-badge eth">Ξ</span>
+                            <div><strong>Ethereum 2.0</strong><small>5.2% APY</small></div>
+                        </div>
+                        <div class="stake-info"><span>Staked</span><strong>4.5 ETH</strong></div>
+                        <div class="stake-info"><span>Rewards</span><strong class="positive">0.234 ETH</strong></div>
+                        <button class="btn-outline">Manage Stake</button>
+                    </div>
+
+                    <div class="card stake-card active-stake">
+                        <div class="stake-top">
+                            <span class="coin-badge sol">S</span>
+                            <div><strong>Solana</strong><small>7.8% APY</small></div>
+                        </div>
+                        <div class="stake-info"><span>Staked</span><strong>25 SOL</strong></div>
+                        <div class="stake-info"><span>Rewards</span><strong class="positive">1.95 SOL</strong></div>
+                        <button class="btn-primary" style="width: 100%;">Manage Stake</button>
+                    </div>
+
+                    <div class="card stake-card">
+                        <div class="stake-top">
+                            <span class="coin-badge ada">A</span>
+                            <div><strong>Cardano</strong><small>4.5% APY</small></div>
+                        </div>
+                        <div class="stake-info"><span>Staked</span><strong>5,000 ADA</strong></div>
+                        <div class="stake-info"><span>Rewards</span><strong class="positive">225 ADA</strong></div>
+                        <button class="btn-outline">Manage Stake</button>
+                    </div>
+
+                    <div class="card stake-card">
+                        <div class="stake-top">
+                            <span class="coin-badge dot">•</span>
+                            <div><strong>Polkadot</strong><small>12.5% APY</small></div>
+                        </div>
+                        <div class="stake-info"><span>Staked</span><strong>150 DOT</strong></div>
+                        <div class="stake-info"><span>Rewards</span><strong class="positive">18.75 DOT</strong></div>
+                        <button class="btn-outline">Manage Stake</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" style="margin-top: 24px;">
+                <h3 style="margin-bottom: 16px; font-size: 16px;">Transaction History</h3>
+                <div class="tx-list">
+                    <div class="tx-row">
+                        <div class="tx-left">
+                            <span class="tx-icon in"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg></span>
+                            <div><strong>Deposit BTC</strong><small>Today, 2:45 PM</small></div>
+                        </div>
+                        <div class="tx-right">
+                            <strong class="positive">+0.0567 BTC</strong>
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="tx-row">
+                        <div class="tx-left">
+                            <span class="tx-icon out"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></span>
+                            <div><strong>Withdraw ETH</strong><small>Yesterday, 11:20 AM</small></div>
+                        </div>
+                        <div class="tx-right">
+                            <strong>-0.805 ETH</strong>
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="tx-row">
+                        <div class="tx-left">
+                            <span class="tx-icon stake"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+                            <div><strong>Stake SOL</strong><small>Dec 28, 4:15 PM</small></div>
+                        </div>
+                        <div class="tx-right">
+                            <strong>-25.00 SOL</strong>
+                            <span class="status-badge pending">Pending</span>
+                        </div>
+                    </div>
+
+                    <div class="tx-row">
+                        <div class="tx-left">
+                            <span class="tx-icon in"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg></span>
+                            <div><strong>Staking Reward</strong><small>Dec 27, 9:30 AM</small></div>
+                        </div>
+                        <div class="tx-right">
+                            <strong class="positive">+0.012 ETH</strong>
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                Copyright © 2026 CryptoVault. Designed by <a href="#">TemplateMo</a>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>

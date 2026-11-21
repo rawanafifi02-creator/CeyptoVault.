@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoVault - Sign In</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        
+        <button class="auth-theme-btn" title="Toggle Theme">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+
+        <div class="auth-banner">
+            <div class="banner-content">
+                <div class="banner-logo">CV</div>
+                <h1>CryptoVault</h1>
+                <p class="banner-desc">Your secure gateway to the world of cryptocurrency trading and portfolio management</p>
+                
+                <ul class="banner-features">
+                    <li>
+                        <span class="feat-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                        Bank-grade security with 2FA protection
+                    </li>
+                    <li>
+                        <span class="feat-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
+                        Real-time market data and analytics
+                    </li>
+                    <li>
+                        <span class="feat-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span>
+                        Multi-wallet support with staking rewards
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="auth-form-side">
+            <div class="auth-box">
+                <h2>Welcome Back</h2>
+                <p class="auth-sub">Enter your credentials to access your account</p>
+
+                <div class="auth-tabs">
+                    <a href="login.html" class="active">Sign In</a>
+                    <a href="signup.html">Sign Up</a>
+                </div>
+
+                <form action="index.html">
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <div class="input-wrapper">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <div class="input-wrapper">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            <input type="password" placeholder="Enter your password" required>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-auth">Sign In</button>
+                </form>
+
+                <div class="divider"><span>OR CONTINUE WITH</span></div>
+
+                <div class="social-btns">
+                    <button type="button" class="social-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"/></svg>
+                        Google
+                    </button>
+                    <button type="button" class="social-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.32c.67-.81 1.12-1.94 1-3.07-.96.04-2.13.64-2.82 1.45-.61.7-.115 1.85-1.01 2.96 1.07.08 2.16-.53 2.83-1.34z"/></svg>
+                        Apple
+                    </button>
+                </div>
+
+                <p class="auth-footer">Don't have an account? <a href="signup.html">Sign up for free</a></p>
+                <p class="copyright">Copyright © 2026 CryptoVault. Designed by <a href="#" style="color:#D98A3C; text-decoration:none;">TemplateMo</a>.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

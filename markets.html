@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoVault - Markets</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <input type="checkbox" id="theme-switch" class="theme-checkbox">
+
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <span class="logo-icon">CV</span>
+                    <h2>CryptoVault</h2>
+                </div>
+
+                <div class="menu-section">
+                    <p class="menu-title">MAIN MENU</p>
+                    <nav class="nav-links">
+                        <a href="index.html"><i class="fa-solid fa-table-cells-large"></i> Dashboard</a>
+                        <a href="markets.html" class="active"><i class="fa-solid fa-chart-line"></i> Markets</a>
+                        <a href="wallet.html"><i class="fa-solid fa-wallet"></i> Wallet</a>
+                    </nav>
+                </div>
+
+                <div class="menu-section">
+                    <p class="menu-title">ACCOUNT</p>
+                    <nav class="nav-links">
+                        <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <label for="theme-switch" class="theme-toggle-btn">
+                    <span><i class="fa-regular fa-sun"></i> Light Mode</span>
+                    <div class="toggle-track"><div class="toggle-thumb"></div></div>
+                </label>
+                <a href="login.html" class="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="topbar">
+                <div class="page-header">
+                    <h1>Markets</h1>
+                    <p>Live cryptocurrency prices and market data</p>
+                </div>
+            </header>
+
+            <section class="market-stats-grid">
+                <div class="card">
+                    <span class="stat-title">Total Market Cap</span>
+                    <h2 class="stat-value" style="margin: 8px 0;">$2.48T</h2>
+                    <span class="stat-change positive">+2.4%</span>
+                </div>
+                <div class="card">
+                    <span class="stat-title">24h Volume</span>
+                    <h2 class="stat-value" style="margin: 8px 0;">$84.2B</h2>
+                    <span class="stat-change positive">+5.8%</span>
+                </div>
+                <div class="card">
+                    <span class="stat-title">BTC Dominance</span>
+                    <h2 class="stat-value" style="margin: 8px 0;">52.4%</h2>
+                    <span class="stat-change negative">-0.3%</span>
+                </div>
+                <div class="card">
+                    <span class="stat-title">Active Cryptos</span>
+                    <h2 class="stat-value" style="margin: 8px 0;">12,847</h2>
+                    <span class="stat-change positive">+24</span>
+                </div>
+            </section>
+
+            <section class="market-filter-bar">
+                <div class="search-box large-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search coins...">
+                </div>
+                <div class="filter-pills">
+                    <span class="active">All</span>
+                    <span>Favorites</span>
+                    <span>DeFi</span>
+                    <span>NFT</span>
+                    <span>Layer 1</span>
+                </div>
+            </section>
+            <section class="markets-main-grid">
+                
+                <div class="card table-card">
+                    <table class="coins-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>COIN</th>
+                                <th>PRICE</th>
+                                <th>24H %</th>
+                                <th>VOLUME</th>
+                                <th>MARKET CAP</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="coin-cell"><span class="coin-badge btc">B</span><div><strong>Bitcoin</strong><small>BTC</small></div></td>
+                                <td><strong>$43,256.00</strong></td>
+                                <td class="positive">+2.34%</td>
+                                <td>$28.4B</td>
+                                <td>$847.2B</td>
+                                <td class="star active"><i class="fa-solid fa-star"></i></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="coin-cell"><span class="coin-badge eth">Ξ</span><div><strong>Ethereum</strong><small>ETH</small></div></td>
+                                <td><strong>$2,284.50</strong></td>
+                                <td class="positive">+1.87%</td>
+                                <td>$12.8B</td>
+                                <td>$274.5B</td>
+                                <td class="star active"><i class="fa-solid fa-star"></i></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="coin-cell"><span class="coin-badge usdt">₮</span><div><strong>Tether</strong><small>USDT</small></div></td>
+                                <td><strong>$1.00</strong></td>
+                                <td class="positive">+0.01%</td>
+                                <td>$45.2B</td>
+                                <td>$95.8B</td>
+                                <td class="star"><i class="fa-regular fa-star"></i></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="coin-cell"><span class="coin-badge bnb">B</span><div><strong>BNB</strong><small>BNB</small></div></td>
+                                <td><strong>$312.45</strong></td>
+                                <td class="negative">-0.82%</td>
+                                <td>$842M</td>
+                                <td>$48.2B</td>
+                                <td class="star"><i class="fa-regular fa-star"></i></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td class="coin-cell"><span class="coin-badge sol">S</span><div><strong>Solana</strong><small>SOL</small></div></td>
+                                <td><strong>$98.42</strong></td>
+                                <td class="positive">+5.67%</td>
+                                <td>$2.4B</td>
+                                <td>$42.8B</td>
+                                <td class="star active"><i class="fa-solid fa-star"></i></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td class="coin-cell"><span class="coin-badge xrp">X</span><div><strong>XRP</strong><small>XRP</small></div></td>
+                                <td><strong>$0.62</strong></td>
+                                <td class="negative">-1.24%</td>
+                                <td>$1.2B</td>
+                                <td>$33.8B</td>
+                                <td class="star"><i class="fa-regular fa-star"></i></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td class="coin-cell"><span class="coin-badge ada">A</span><div><strong>Cardano</strong><small>ADA</small></div></td>
+                                <td><strong>$0.52</strong></td>
+                                <td class="positive">+3.12%</td>
+                                <td>$428M</td>
+                                <td>$18.4B</td>
+                                <td class="star"><i class="fa-regular fa-star"></i></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td class="coin-cell"><span class="coin-badge doge">Ð</span><div><strong>Dogecoin</strong><small>DOGE</small></div></td>
+                                <td><strong>$0.082</strong></td>
+                                <td class="positive">+8.45%</td>
+                                <td>$892M</td>
+                                <td>$11.6B</td>
+                                <td class="star"><i class="fa-regular fa-star"></i></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td class="coin-cell"><span class="coin-badge dot">•</span><div><strong>Polkadot</strong><small>DOT</small></div></td>
+                                <td><strong>$7.45</strong></td>
+                                <td class="positive">+4.21%</td>
+                                <td>$312M</td>
+                                <td>$9.8B</td>
+                                <td class="star"><i class="fa-regular fa-star"></i></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td class="coin-cell"><span class="coin-badge matic">M</span><div><strong>Polygon</strong><small>MATIC</small></div></td>
+                                <td><strong>$0.89</strong></td>
+                                <td class="negative">-2.15%</td>
+                                <td>$524M</td>
+                                <td>$8.2B</td>
+                                <td class="star"><i class="fa-regular fa-star"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="markets-side">
+                    <div class="card">
+                        <h3 style="margin-bottom: 16px; font-size: 16px;">🔥 Trending</h3>
+                        <div class="trending-list">
+                            <div class="trending-item">
+                                <div class="t-left"><span class="rank">1</span><span class="coin-badge doge">Ð</span><div><strong>Dogecoin</strong><small>DOGE</small></div></div>
+                                <span class="positive">+8.45%</span>
+                            </div>
+                            <div class="trending-item">
+                                <div class="t-left"><span class="rank">2</span><span class="coin-badge sol">S</span><div><strong>Solana</strong><small>SOL</small></div></div>
+                                <span class="positive">+5.67%</span>
+                            </div>
+                            <div class="trending-item">
+                                <div class="t-left"><span class="rank">3</span><span class="coin-badge dot">•</span><div><strong>Polkadot</strong><small>DOT</small></div></div>
+                                <span class="positive">+4.21%</span>
+                            </div>
+                            <div class="trending-item">
+                                <div class="t-left"><span class="rank">4</span><span class="coin-badge ada">A</span><div><strong>Cardano</strong><small>ADA</small></div></div>
+                                <span class="positive">+3.12%</span>
+                            </div>
+                            <div class="trending-item">
+                                <div class="t-left"><span class="rank">5</span><span class="coin-badge btc">B</span><div><strong>Bitcoin</strong><small>BTC</small></div></div>
+                                <span class="positive">+2.34%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card fear-card">
+                        <h3 style="margin-bottom: 20px; font-size: 16px;">Fear & Greed Index</h3>
+                        <div class="fear-meter">
+                            <div class="fear-bar">
+                                <div class="fear-dot" style="left: 68%;"></div>
+                            </div>
+                            <div class="fear-labels">
+                                <span>Extreme Fear</span>
+                                <span>Neutral</span>
+                                <span>Extreme Greed</span>
+                            </div>
+                        </div>
+                        <div class="fear-score">
+                            <h2>68</h2>
+                            <span>Greed</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <footer class="main-footer">
+                Copyright © 2026 cryptovault. Designed by <a href="#">TemplateMo</a>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
